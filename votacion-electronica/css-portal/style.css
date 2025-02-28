@@ -1449,4 +1449,17 @@ body.scrollHidden {
   .listasVotacion .itemLista .numero span {
     font-family: SFPRODISPLAY-Regular;
   }
+  .modalPopup .content {
+    max-width: 250px;
+  }
+  .modalPopup .content span {
+    margin-top: 10px;
+  }
+  .modalPopup .content a {
+    margin-top: 21px;
+  }
+  .modalPopup .content .closeModal {
+    top: 26px;
+    right: 20px;
+  }
 }
