@@ -1982,7 +1982,7 @@ margin-top: 5px;
   height: 100dvh; /* Usa dvh en lugar de vh */
   background: rgba(3, 3, 3, 0.6);
   z-index: 999;
-  display: block;
+  display: none;
 }
 
 .modalPreferencias.active {
@@ -2002,7 +2002,7 @@ margin-top: 5px;
   max-width: 740px;
   width: 100%;
   position: relative;
-  padding: 50px 40px;
+  padding: 50px 40px 37px 40px;
 }
 
 .modalPreferencias .content h4{
@@ -2013,13 +2013,10 @@ font-weight: 700;
 }
 
 .modalPreferencias .content .elemento{
-  padding: 29px 0;
+  padding: 25px 0;
   border-bottom: 1px solid rgba(0, 60, 62, 0.3);
 }
 
-.modalPreferencias .content .elemento .cabecera{
-  margin-bottom: 22px;
-}
 
 .modalPreferencias .content .elemento .cuerpo{
   display: flex;
@@ -2043,12 +2040,16 @@ font-size: 18px;
 font-weight: 400;
 }
 
+.modalPreferencias .content .elemento .cabecera{
+  cursor: pointer;
+}
+
 .modalPreferencias .content .elemento .cuerpo textarea{
   padding: 5px;
   font-size: 16px;
   border-radius: 5px;
 border: 1px solid #003C3E;
-width: 100%;
+width: calc(100% - 65px);
 height: 60px;
 }
 
@@ -2089,8 +2090,107 @@ font-weight: 400;
 }
 .modalPreferencias .content .elemento .cuerpo .listaInputs div label{
   border-radius: 3px;
+  position: relative;
   border: 1px solid #003C3E;
   width: 20px;
 height: 20px;
 flex-shrink: 0;
+cursor: pointer;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs .contentInput.active label{
+  background-color: #003C3E;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs .contentInput.active label::before{
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-image: url(../imgs/check2.svg);
+height: 18px;
+width: 18px;
+}
+
+.modalPreferencias .content .elemento .cuerpo{
+  display: none;
+}
+
+.modalPreferencias .content .elemento.active .cuerpo{
+  display: flex;
+}
+
+.modalPreferencias .content .elemento.active .cabecera{
+  margin-bottom: 22px;
+}
+
+.modalPreferencias .content .guardar{
+  margin: 0 auto;
+  display: flex;
+  margin-top: 36px;
+  cursor: pointer;
+  color: #FFF;
+text-align: center;
+font-family: SFPRODISPLAY-Regular;
+font-size: 16px;
+font-weight: 500;
+max-width: 301px;
+width: 100%;
+border-radius: 8px;
+background: #003C3E;
+display: flex;
+justify-content: center;
+padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .modalPreferencias .content .elemento .cuerpo{
+    max-width: 430px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 500px) {
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    grid-template-columns: repeat(2, 1fr);
+}
+.modalPreferencias .content{
+  padding: 26px 25px 22px 25px;
+}
+.modalPreferencias .content h4 {
+  font-size: 20px;
+}
+.modalPreferencias .content .closeModalPreferencias{
+  top: 30px;
+  right: 23px;
+}
+.modalPreferencias .content .closeModalPreferencias svg{
+width: 14px;
+height: 14px;
+}
+.modalPreferencias .content .elemento .cuerpo p, .modalPreferencias .content .elemento .cuerpo textarea,
+.modalPreferencias .content h5 {
+  font-size: 16px;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs div {
+  gap: 8px;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs div label{
+  width: 17px;
+  height: 17px;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs{
+  row-gap: 11px;
+}
+.modalPreferencias .content .elemento.active .cabecera {
+  margin-bottom: 18px;
+}
+.modalPreferencias .content .elemento {
+  padding: 19px 0;
+}
+.modalPreferencias .content .guardar{
+  max-width: 213.981px;
+  padding: 17px 0;
+}
 }
