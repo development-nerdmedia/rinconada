@@ -311,6 +311,31 @@ main .datos .card {
   align-items: center;
   gap: 18px;
 }
+main .datos .card.familiares {
+  display: block;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+main .datos .card.familiares .cabeceraFamiliar {
+  margin-top: 22px;
+  padding: 20px 23px;
+  border-radius: 16px;
+  background: #f9ffea;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+main .datos .card.familiares .cuerpoFamiliar {
+  display: none;
+}
+main .datos .card.familiares.active .cuerpoFamiliar {
+  display: block;
+}
+main .datos .card.familiares.active .buttons .flecha svg {
+  transform: rotate(0);
+}
 main .datos .card h3 {
   color: #003c3e;
   font-family: Inter;
@@ -366,6 +391,9 @@ main .datos .card .part2 .estado1 {
   padding-top: 5px;
   padding-left: 7px;
 }
+main .datos .card.familiares .part2 .estado1 {
+  padding-left: 0;
+}
 main .datos .card .part2 .estado1::before {
   content: "";
   position: absolute;
@@ -375,6 +403,9 @@ main .datos .card .part2 .estado1::before {
   top: 10px;
   left: 0;
   border-radius: 50%;
+}
+main .datos .card.familiares .part2 .estado1::before {
+  display: none;
 }
 main .datos .card .part2 .estado2 {
   color: #78b548;
@@ -386,6 +417,51 @@ main .datos .card .part2 .estado2 {
   padding: 4px 7px;
   display: flex;
   gap: 5px;
+}
+main .datos .card .part2 .estado2.Vencido {
+  background: rgba(255, 0, 0, 0.5);
+  color: #ff0707;
+}
+main .datos .card .part2 .estado2.Vencido svg rect,
+main .datos .card .part2 .estado2.Vencido svg path {
+  stroke: #ff0707;
+}
+main .datos .card.familiares {
+  display: block;
+}
+main .datos .card.familiares .cabeceraFamiliar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+main .datos .card.familiares.Vencido .buttons {
+  pointer-events: none;
+  opacity: 0;
+}
+main .datos .card.familiares .numero {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+main .datos .card.familiares .buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+main .datos .card.familiares .buttons .flecha {
+  cursor: pointer;
+}
+main .datos .card.familiares .buttons .flecha svg {
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+main .datos .card.familiares .contentCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 main .itemInfo {
   margin-top: 26px;
@@ -995,7 +1071,7 @@ table {
 }
 
 .contentEnlaces .item {
-  max-width: 160px;
+  max-width: 185px;
   width: 100%;
   flex-shrink: 0;
 }
@@ -1056,7 +1132,7 @@ table {
     font-size: 20px;
   }
   .contentEnlaces .item {
-    max-width: 138px;
+    max-width: 165px;
     width: 100%;
   }
 }
@@ -1073,7 +1149,7 @@ table {
     font-size: 14px;
   }
   .contentEnlaces .item {
-    max-width: 98px;
+    max-width: 120px;
     width: 100%;
   }
   .contentEnlaces .item a img {
@@ -1832,5 +1908,301 @@ body.scrollHidden {
   }
   .modalRegistrarDocumento .content {
     padding: 24px 20px;
+  }
+}
+main .datos .card.familiares .cabeceraFamiliar .numeroMovil,
+main .datos .card.familiares .cabeceraFamiliar .botonMobil {
+  display: none;
+}
+main .datos .card.familiares.Vencido .botonMobil {
+  display: none !important;
+}
+
+main .datos .card.familiares .cuerpoFamiliar .part2 {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  main .datos .card.familiares .buttons,
+  main .datos .card.familiares .numero {
+    display: none;
+  }
+  main .datos .card.familiares .cabeceraFamiliar .numeroMovil {
+    display: block;
+    color: #003c3e;
+    font-family: SFPRODISPLAY;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  main .datos .card .part2 {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  main .datos .card.familiares .cabeceraFamiliar {
+    position: relative;
+  }
+  main .datos .card.familiares .cabeceraFamiliar .botonMobil {
+    display: block;
+    position: absolute;
+    right: 25px;
+    bottom: 12px;
+    cursor: pointer;
+  }
+  main .datos .card.familiares .cabeceraFamiliar .botonMobil svg {
+    pointer-events: none;
+  }
+  main .datos .card.familiares .cuerpoFamiliar .editar {
+    overflow: hidden;
+    border: none;
+    text-indent: -9999px;
+    padding: 0;
+    display: flex !important;
+  }
+  main .datos .card.familiares .cuerpoFamiliar .editar svg {
+    width: 22px;
+    height: 21.139px;
+  }
+  main .datos .card.familiares .cuerpoFamiliar .part2 {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 500px) {
+  main .datos .card.familiares .cuerpoFamiliar .part2 {
+    gap: 0;
+  }
+}
+
+.modalPreferencias {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* Usa dvh en lugar de vh */
+  background: rgba(3, 3, 3, 0.6);
+  z-index: 999;
+  display: none;
+}
+
+.modalPreferencias.active {
+  display: block;
+}
+
+.modalPreferencias .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalPreferencias .content {
+  border-radius: 20px;
+  background: #fff;
+  max-width: 740px;
+  width: 100%;
+  position: relative;
+  padding: 50px 40px 37px 40px;
+}
+
+.modalPreferencias .content h4 {
+  color: #003c3e;
+  font-family: SFPRODISPLAY;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.modalPreferencias .content .elemento {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0, 60, 62, 0.3);
+}
+
+.modalPreferencias .content .elemento .cuerpo {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.modalPreferencias .content .elemento:first-child .cuerpo {
+  width: 100%;
+  max-width: 640px;
+}
+
+.modalPreferencias .content .elemento .cuerpo p,
+.modalPreferencias .content .elemento .cuerpo textarea {
+  flex-shrink: 0;
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.modalPreferencias .content .elemento .cabecera {
+  cursor: pointer;
+}
+
+.modalPreferencias .content .elemento .cuerpo textarea {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #003c3e;
+  width: calc(100% - 65px);
+  height: 60px;
+}
+
+.modalPreferencias .content h5 {
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.modalPreferencias .content .closeModalPreferencias {
+  position: absolute;
+  top: 50px;
+  right: 32px;
+  cursor: pointer;
+}
+
+.modalPreferencias .content button {
+  background-color: transparent;
+  border: none;
+}
+
+.modalPreferencias .content .elemento .cuerpo .listaInputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.modalPreferencias .content .elemento .cuerpo .listaInputs div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.modalPreferencias .content .elemento .cuerpo .listaInputs div input {
+  display: none;
+}
+.modalPreferencias .content .elemento .cuerpo .listaInputs div label {
+  border-radius: 3px;
+  position: relative;
+  border: 1px solid #003c3e;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.modalPreferencias
+  .content
+  .elemento
+  .cuerpo
+  .listaInputs
+  .contentInput.active
+  label {
+  background-color: #003c3e;
+}
+.modalPreferencias
+  .content
+  .elemento
+  .cuerpo
+  .listaInputs
+  .contentInput.active
+  label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../imgs/check2.svg);
+  height: 18px;
+  width: 18px;
+}
+
+.modalPreferencias .content .elemento .cuerpo {
+  display: none;
+}
+
+.modalPreferencias .content .elemento.active .cuerpo {
+  display: flex;
+}
+
+.modalPreferencias .content .elemento.active .cabecera {
+  margin-bottom: 22px;
+}
+
+.modalPreferencias .content .guardar {
+  margin: 0 auto;
+  display: flex;
+  margin-top: 36px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 301px;
+  width: 100%;
+  border-radius: 8px;
+  background: #003c3e;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .modalPreferencias .content .elemento .cuerpo {
+    max-width: 430px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modalPreferencias .content {
+    padding: 26px 25px 22px 25px;
+  }
+  .modalPreferencias .content h4 {
+    font-size: 20px;
+  }
+  .modalPreferencias .content .closeModalPreferencias {
+    top: 30px;
+    right: 23px;
+  }
+  .modalPreferencias .content .closeModalPreferencias svg {
+    width: 14px;
+    height: 14px;
+  }
+  .modalPreferencias .content .elemento .cuerpo p,
+  .modalPreferencias .content .elemento .cuerpo textarea,
+  .modalPreferencias .content h5 {
+    font-size: 16px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs div {
+    gap: 8px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs div label {
+    width: 17px;
+    height: 17px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    row-gap: 11px;
+  }
+  .modalPreferencias .content .elemento.active .cabecera {
+    margin-bottom: 18px;
+  }
+  .modalPreferencias .content .elemento {
+    padding: 19px 0;
+  }
+  .modalPreferencias .content .guardar {
+    max-width: 213.981px;
+    padding: 17px 0;
   }
 }
