@@ -2206,3 +2206,308 @@ main .datos .card.familiares .cuerpoFamiliar .part2 {
     padding: 17px 0;
   }
 }
+
+.contentDesplegables {
+  border-radius: 16px;
+  background: #f3fcff;
+  padding: 33px 36px;
+  margin-top: 30px;
+}
+
+.contentDesplegables h3 {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contentDesplegables h4 {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contentDesplegables li {
+  list-style: disc;
+}
+
+.contentDesplegables ul {
+  padding-left: 57px;
+}
+.contentDesplegables li a {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.contentDesplegables .cuerpo,
+.contentDesplegables .cuerpo2 {
+  display: none;
+}
+
+.contentDesplegables .itemDesplegable .cabecera {
+  cursor: pointer;
+  padding: 22px 14px;
+  border-bottom: 1px solid #003c3e4d;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.contentDesplegables .subitemDesplegable .cabecera2 {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+
+.contentDesplegables .itemDesplegable.active {
+  border-bottom: 1px solid #003c3e4d;
+  padding-bottom: 24px;
+}
+
+.contentDesplegables .itemDesplegable.active .cuerpo {
+  display: block;
+}
+
+.contentDesplegables .itemDesplegable.active .cabecera {
+  border-bottom: none;
+  padding-bottom: 11px;
+}
+
+.contentDesplegables .subitemDesplegable.active .cuerpo2 {
+  margin-bottom: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 1280px) {
+  .contentDesplegables h3 {
+    font-size: 20px;
+  }
+  .contentDesplegables h4 {
+    font-size: 18px;
+  }
+  .contentDesplegables li a {
+    font-size: 18px;
+  }
+  .contentDesplegables {
+    padding: 20px 20px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contentDesplegables h3 {
+    font-size: 18px;
+  }
+  .contentDesplegables .itemDesplegable .cabecera img,
+  .contentDesplegables .subitemDesplegable .cabecera2 img {
+    width: 16px;
+    height: 10px;
+  }
+  .contentDesplegables .itemDesplegable .cabecera {
+    padding: 15px 14px;
+  }
+  .contentDesplegables h4 {
+    font-size: 16px;
+  }
+  .contentDesplegables li a {
+    font-size: 15px;
+  }
+  .contentDesplegables ul {
+    padding-left: 41px;
+  }
+  .contentDesplegables {
+    padding: 13px 11px;
+    padding-bottom: 24px;
+  }
+}
+
+.contentRegistro {
+  margin-top: 20px;
+}
+
+.contentRegistro .contentInput {
+  margin-bottom: 30px;
+}
+
+.contentRegistro .contentRadios {
+  margin-bottom: 35px;
+}
+
+.contentRegistro .contentInput p,
+.contentRegistro .contentRadios p {
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contentRegistro .contentRadios p {
+  margin-bottom: 20px;
+}
+
+.contentRegistro .contentInput input {
+  border-radius: 8px;
+  border: 1px solid #003c3e;
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 56px;
+  padding: 15px 16px;
+}
+
+.contentRegistro .contentInput input.error {
+  border: 1.5px solid #c53030;
+}
+
+.contentRegistro .contentRadios .radio {
+  display: flex;
+  margin-left: 30px;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contentRegistro .contentRadios .radio.error label {
+  border: 1px solid #c53030;
+}
+
+.contentRegistro .contentRadios .radio.error p {
+  color: #c53030;
+}
+
+.contentRegistro .contentRadios .radio input {
+  display: none;
+}
+
+.contentRegistro .contentRadios .radio label {
+  border: 1px solid #003c3e;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+}
+
+.contentRegistro .contentRadios .radio.active label {
+  background-color: #003c3e;
+  position: relative;
+}
+.contentRegistro .contentRadios .radio.active label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.contentRegistro .contentRadios .radio p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.contentRegistro form button {
+  border-radius: 8px;
+  background: #809e9f;
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  max-width: 222px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.contentRegistro .contentInput {
+  position: relative;
+}
+
+.contentRegistro .contentInput img {
+  position: absolute;
+  bottom: 16px;
+  right: 15px;
+  width: 24px;
+  height: auto;
+  pointer-events: none;
+}
+
+.contentRegistro .mensajeErrorRegistro,
+.contentRegistro .mensajeErrorRegistro2 {
+  display: none;
+  gap: 13px;
+  align-items: center;
+  border-radius: 6px;
+  background: #ffe8e8;
+  margin-bottom: 15px;
+  padding: 4px 13px;
+}
+
+.contentRegistro .mensajeErrorRegistro.active,
+.contentRegistro .mensajeErrorRegistro2.active {
+  display: flex;
+}
+
+.contentRegistro .mensajeErrorRegistro .icon,
+.contentRegistro .mensajeErrorRegistro2 .icon {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.contentRegistro .mensajeErrorRegistro p,
+.contentRegistro .mensajeErrorRegistro2 p {
+  color: #c53030;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modalPopup .content button {
+  color: #fff;
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #003c3e;
+  max-width: 149px;
+  width: 100%;
+  padding: 11px 0;
+  display: block;
+  margin-top: 21px;
+}
+
+.modalPopup.noconfirmado .content p {
+  color: #c53030;
+}
+
+.modalPopup.noconfirmado .content span {
+  color: #c53030;
+  opacity: 1;
+}
+
+.modalPopup.noconfirmado .content span.dos {
+  color: #003c3e;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.modalPopup.noconfirmado .content,
+.modalPopup.confirmado .content {
+  max-width: 270px;
+}
