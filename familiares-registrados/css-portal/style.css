@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @font-face {
   font-family: "SFPRODISPLAY";
   src: url("../fuentes/SFPRODISPLAYBOLD.OTF");
@@ -333,7 +334,7 @@ main .datos .card.familiares .cuerpoFamiliar {
 main .datos .card.familiares.active .cuerpoFamiliar {
   display: block;
 }
-main .datos .card.familiares.active .buttons .flecha svg{
+main .datos .card.familiares.active .buttons .flecha svg {
   transform: rotate(0);
 }
 main .datos .card h3 {
@@ -404,7 +405,7 @@ main .datos .card .part2 .estado1::before {
   left: 0;
   border-radius: 50%;
 }
-main .datos .card.familiares .part2 .estado1::before{
+main .datos .card.familiares .part2 .estado1::before {
   display: none;
 }
 main .datos .card .part2 .estado2 {
@@ -424,7 +425,7 @@ main .datos .card .part2 .estado2.Vencido {
 }
 main .datos .card .part2 .estado2.Vencido svg rect,
 main .datos .card .part2 .estado2.Vencido svg path {
-  stroke: #ff0707;0
+  stroke: #ff0707;
 }
 main .datos .card.familiares {
   display: block;
@@ -435,9 +436,9 @@ main .datos .card.familiares .cabeceraFamiliar {
   justify-content: space-between;
   gap: 30px;
 }
-main .datos .card.familiares.Vencido .buttons{
-pointer-events: none;
-opacity: 0;
+main .datos .card.familiares.Vencido .buttons {
+  pointer-events: none;
+  opacity: 0;
 }
 main .datos .card.familiares .numero {
   color: #003c3e;
@@ -1071,7 +1072,7 @@ table {
 }
 
 .contentEnlaces .item {
-  max-width: 160px;
+  max-width: 185px;
   width: 100%;
   flex-shrink: 0;
 }
@@ -1132,7 +1133,7 @@ table {
     font-size: 20px;
   }
   .contentEnlaces .item {
-    max-width: 138px;
+    max-width: 165px;
     width: 100%;
   }
 }
@@ -1149,7 +1150,7 @@ table {
     font-size: 14px;
   }
   .contentEnlaces .item {
-    max-width: 98px;
+    max-width: 120px;
     width: 100%;
   }
   .contentEnlaces .item a img {
@@ -1911,68 +1912,68 @@ body.scrollHidden {
   }
 }
 main .datos .card.familiares .cabeceraFamiliar .numeroMovil,
-main .datos .card.familiares .cabeceraFamiliar .botonMobil{
+main .datos .card.familiares .cabeceraFamiliar .botonMobil {
   display: none;
 }
-main .datos .card.familiares.Vencido .botonMobil{
+main .datos .card.familiares.Vencido .botonMobil {
   display: none !important;
 }
 
-main .datos .card.familiares .cuerpoFamiliar .part2{
-align-items: center;
+main .datos .card.familiares .cuerpoFamiliar .part2 {
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   main .datos .card.familiares .buttons,
-  main .datos .card.familiares .numero{
+  main .datos .card.familiares .numero {
     display: none;
   }
-  main .datos .card.familiares .cabeceraFamiliar .numeroMovil{
+  main .datos .card.familiares .cabeceraFamiliar .numeroMovil {
     display: block;
-    color: #003C3E;
-font-family: SFPRODISPLAY;
-font-size: 16px;
-font-weight: 700;
-margin-top: 5px;
+    color: #003c3e;
+    font-family: SFPRODISPLAY;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
   }
-  main .datos .card .part2{
+  main .datos .card .part2 {
     flex-direction: column-reverse;
     gap: 10px;
   }
-  main .datos .card.familiares .cabeceraFamiliar{
+  main .datos .card.familiares .cabeceraFamiliar {
     position: relative;
   }
-  main .datos .card.familiares .cabeceraFamiliar .botonMobil{
+  main .datos .card.familiares .cabeceraFamiliar .botonMobil {
     display: block;
     position: absolute;
     right: 25px;
     bottom: 12px;
     cursor: pointer;
   }
-  main .datos .card.familiares .cabeceraFamiliar .botonMobil svg{
+  main .datos .card.familiares .cabeceraFamiliar .botonMobil svg {
     pointer-events: none;
   }
-  main .datos .card.familiares .cuerpoFamiliar .editar{
+  main .datos .card.familiares .cuerpoFamiliar .editar {
     overflow: hidden;
-    border: none;text-indent: -9999px;
+    border: none;
+    text-indent: -9999px;
     padding: 0;
     display: flex !important;
   }
-  main .datos .card.familiares .cuerpoFamiliar .editar svg{
+  main .datos .card.familiares .cuerpoFamiliar .editar svg {
     width: 22px;
-        height: 21.139px;
+    height: 21.139px;
   }
-  main .datos .card.familiares .cuerpoFamiliar .part2{
+  main .datos .card.familiares .cuerpoFamiliar .part2 {
     flex-direction: row;
   }
 }
 
 @media (max-width: 500px) {
-  main .datos .card.familiares .cuerpoFamiliar .part2{
+  main .datos .card.familiares .cuerpoFamiliar .part2 {
     gap: 0;
   }
 }
-
 
 .modalPreferencias {
   position: fixed;
@@ -2005,59 +2006,58 @@ margin-top: 5px;
   padding: 50px 40px 37px 40px;
 }
 
-.modalPreferencias .content h4{
-  color: #003C3E;
-font-family: SFPRODISPLAY;
-font-size: 22px;
-font-weight: 700;
+.modalPreferencias .content h4 {
+  color: #003c3e;
+  font-family: SFPRODISPLAY;
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.modalPreferencias .content .elemento{
+.modalPreferencias .content .elemento {
   padding: 25px 0;
   border-bottom: 1px solid rgba(0, 60, 62, 0.3);
 }
 
-
-.modalPreferencias .content .elemento .cuerpo{
+.modalPreferencias .content .elemento .cuerpo {
   display: flex;
   align-items: start;
   justify-content: center;
   gap: 10px;
   max-width: 500px;
-  margin: 0 auto
+  margin: 0 auto;
 }
-.modalPreferencias .content .elemento:first-child .cuerpo{
+.modalPreferencias .content .elemento:first-child .cuerpo {
   width: 100%;
   max-width: 640px;
 }
 
 .modalPreferencias .content .elemento .cuerpo p,
-.modalPreferencias .content .elemento .cuerpo textarea{
+.modalPreferencias .content .elemento .cuerpo textarea {
   flex-shrink: 0;
-  color: #003C3E;
-font-family: SFPRODISPLAY-Regular;
-font-size: 18px;
-font-weight: 400;
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.modalPreferencias .content .elemento .cabecera{
+.modalPreferencias .content .elemento .cabecera {
   cursor: pointer;
 }
 
-.modalPreferencias .content .elemento .cuerpo textarea{
+.modalPreferencias .content .elemento .cuerpo textarea {
   padding: 5px;
   font-size: 16px;
   border-radius: 5px;
-border: 1px solid #003C3E;
-width: calc(100% - 65px);
-height: 60px;
+  border: 1px solid #003c3e;
+  width: calc(100% - 65px);
+  height: 60px;
 }
 
-.modalPreferencias .content h5{
-  color: #003C3E;
-font-family: SFPRODISPLAY-Regular;
-font-size: 18px;
-font-weight: 400;
+.modalPreferencias .content h5 {
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .modalPreferencias .content .closeModalPreferencias {
@@ -2067,130 +2067,764 @@ font-weight: 400;
   cursor: pointer;
 }
 
-.modalPreferencias .content button{
+.modalPreferencias .content button {
   background-color: transparent;
   border: none;
 }
 
-.modalPreferencias .content .elemento .cuerpo .listaInputs{
+.modalPreferencias .content .elemento .cuerpo .listaInputs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
   row-gap: 15px;
 }
 
-.modalPreferencias .content .elemento .cuerpo .listaInputs div{
+.modalPreferencias .content .elemento .cuerpo .listaInputs div {
   display: flex;
   gap: 15px;
   align-items: center;
 }
 
-.modalPreferencias .content .elemento .cuerpo .listaInputs div input{
+.modalPreferencias .content .elemento .cuerpo .listaInputs div input {
   display: none;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs div label{
+.modalPreferencias .content .elemento .cuerpo .listaInputs div label {
   border-radius: 3px;
   position: relative;
-  border: 1px solid #003C3E;
+  border: 1px solid #003c3e;
   width: 20px;
-height: 20px;
-flex-shrink: 0;
-cursor: pointer;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs .contentInput.active label{
-  background-color: #003C3E;
+.modalPreferencias
+  .content
+  .elemento
+  .cuerpo
+  .listaInputs
+  .contentInput.active
+  label {
+  background-color: #003c3e;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs .contentInput.active label::before{
-content: '';
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background-image: url(../imgs/check2.svg);
-height: 18px;
-width: 18px;
+.modalPreferencias
+  .content
+  .elemento
+  .cuerpo
+  .listaInputs
+  .contentInput.active
+  label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../imgs/check2.svg);
+  height: 18px;
+  width: 18px;
 }
 
-.modalPreferencias .content .elemento .cuerpo{
+.modalPreferencias .content .elemento .cuerpo {
   display: none;
 }
 
-.modalPreferencias .content .elemento.active .cuerpo{
+.modalPreferencias .content .elemento.active .cuerpo {
   display: flex;
 }
 
-.modalPreferencias .content .elemento.active .cabecera{
+.modalPreferencias .content .elemento.active .cabecera {
   margin-bottom: 22px;
 }
 
-.modalPreferencias .content .guardar{
+.modalPreferencias .content .guardar {
   margin: 0 auto;
   display: flex;
   margin-top: 36px;
   cursor: pointer;
-  color: #FFF;
-text-align: center;
-font-family: SFPRODISPLAY-Regular;
-font-size: 16px;
-font-weight: 500;
-max-width: 301px;
-width: 100%;
-border-radius: 8px;
-background: #003C3E;
-display: flex;
-justify-content: center;
-padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 301px;
+  width: 100%;
+  border-radius: 8px;
+  background: #003c3e;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 @media (max-width: 768px) {
-  .modalPreferencias .content .elemento .cuerpo{
+  .modalPreferencias .content .elemento .cuerpo {
     max-width: 430px;
   }
   .modalPreferencias .content .elemento .cuerpo .listaInputs {
     grid-template-columns: repeat(3, 1fr);
-}
+  }
 }
 
 @media (max-width: 500px) {
   .modalPreferencias .content .elemento .cuerpo .listaInputs {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .modalPreferencias .content {
+    padding: 26px 25px 22px 25px;
+  }
+  .modalPreferencias .content h4 {
+    font-size: 20px;
+  }
+  .modalPreferencias .content .closeModalPreferencias {
+    top: 30px;
+    right: 23px;
+  }
+  .modalPreferencias .content .closeModalPreferencias svg {
+    width: 14px;
+    height: 14px;
+  }
+  .modalPreferencias .content .elemento .cuerpo p,
+  .modalPreferencias .content .elemento .cuerpo textarea,
+  .modalPreferencias .content h5 {
+    font-size: 16px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs div {
+    gap: 8px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs div label {
+    width: 17px;
+    height: 17px;
+  }
+  .modalPreferencias .content .elemento .cuerpo .listaInputs {
+    row-gap: 11px;
+  }
+  .modalPreferencias .content .elemento.active .cabecera {
+    margin-bottom: 18px;
+  }
+  .modalPreferencias .content .elemento {
+    padding: 19px 0;
+  }
+  .modalPreferencias .content .guardar {
+    max-width: 213.981px;
+    padding: 17px 0;
+  }
 }
-.modalPreferencias .content{
-  padding: 26px 25px 22px 25px;
+
+.contentDesplegables {
+  border-radius: 16px;
+  background: #f3fcff;
+  padding: 33px 36px;
+  margin-top: 30px;
 }
-.modalPreferencias .content h4 {
+
+.contentDesplegables h3 {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contentDesplegables h4 {
+  color: #003c3e;
+  font-family: Inter;
   font-size: 20px;
+  font-weight: 500;
 }
-.modalPreferencias .content .closeModalPreferencias{
-  top: 30px;
-  right: 23px;
+
+.contentDesplegables li {
+  list-style: disc;
 }
-.modalPreferencias .content .closeModalPreferencias svg{
-width: 14px;
-height: 14px;
+
+.contentDesplegables ul {
+  padding-left: 57px;
 }
-.modalPreferencias .content .elemento .cuerpo p, .modalPreferencias .content .elemento .cuerpo textarea,
-.modalPreferencias .content h5 {
+.contentDesplegables li a {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.contentDesplegables .cuerpo,
+.contentDesplegables .cuerpo2 {
+  display: none;
+}
+
+.contentDesplegables .itemDesplegable .cabecera {
+  cursor: pointer;
+  padding: 22px 14px;
+  border-bottom: 1px solid #003c3e4d;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.contentDesplegables .subitemDesplegable .cabecera2 {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+
+.contentDesplegables .itemDesplegable.active {
+  border-bottom: 1px solid #003c3e4d;
+  padding-bottom: 24px;
+}
+
+.contentDesplegables .itemDesplegable.active .cuerpo {
+  display: block;
+}
+
+.contentDesplegables .itemDesplegable.active .cabecera {
+  border-bottom: none;
+  padding-bottom: 11px;
+}
+
+.contentDesplegables .subitemDesplegable.active .cuerpo2 {
+  margin-bottom: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 1280px) {
+  .contentDesplegables h3 {
+    font-size: 20px;
+  }
+  .contentDesplegables h4 {
+    font-size: 18px;
+  }
+  .contentDesplegables li a {
+    font-size: 18px;
+  }
+  .contentDesplegables {
+    padding: 20px 20px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contentDesplegables h3 {
+    font-size: 18px;
+  }
+  .contentDesplegables .itemDesplegable .cabecera img,
+  .contentDesplegables .subitemDesplegable .cabecera2 img {
+    width: 16px;
+    height: 10px;
+  }
+  .contentDesplegables .itemDesplegable .cabecera {
+    padding: 15px 14px;
+  }
+  .contentDesplegables h4 {
+    font-size: 16px;
+  }
+  .contentDesplegables li a {
+    font-size: 15px;
+  }
+  .contentDesplegables ul {
+    padding-left: 41px;
+  }
+  .contentDesplegables {
+    padding: 13px 11px;
+    padding-bottom: 24px;
+  }
+}
+
+.contentRegistro {
+  margin-top: 20px;
+}
+
+.contentRegistro .contentInput {
+  margin-bottom: 30px;
+}
+
+.contentRegistro .contentRadios {
+  margin-bottom: 35px;
+}
+
+.contentRegistro .contentInput p,
+.contentRegistro .contentRadios p {
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contentRegistro .contentRadios p {
+  margin-bottom: 20px;
+}
+
+.contentRegistro .contentInput input,
+.contentRegistro .contentInput textarea,
+.contentRegistro .contentInput select {
+  border-radius: 8px;
+  border: 1px solid #003c3e;
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 56px;
+  padding: 15px 16px;
+}
+
+.contentRegistro .contentInput textarea {
+  height: 100px;
+}
+
+.contentRegistro .contentInput input.error {
+  border: 1.5px solid #c53030;
+}
+
+.contentRegistro .contentRadios .radio {
+  display: flex;
+  margin-left: 30px;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contentRegistro .contentRadios .radio.error label {
+  border: 1px solid #c53030;
+}
+
+.contentRegistro .contentRadios .radio.error p {
+  color: #c53030;
+}
+
+.contentRegistro .contentRadios .radio input {
+  display: none;
+}
+
+.contentRegistro .contentRadios .radio label {
+  border: 1px solid #003c3e;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+}
+
+.contentRegistro .contentRadios .radio.active label {
+  background-color: #003c3e;
+  position: relative;
+}
+.contentRegistro .contentRadios .radio.active label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+}
+
+.contentRegistro .contentRadios .radio p {
+  margin-bottom: 0;
   font-size: 16px;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs div {
+
+.contentRegistro form button {
+  border-radius: 8px;
+  background: #809e9f;
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  max-width: 222px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.contentRegistro .contentInput {
+  position: relative;
+}
+
+.contentRegistro .contentInput img {
+  position: absolute;
+  bottom: 16px;
+  right: 15px;
+  width: 24px;
+  height: auto;
+  pointer-events: none;
+}
+
+.contentRegistro .mensajeErrorRegistro,
+.contentRegistro .mensajeErrorRegistro2 {
+  display: none;
+  gap: 13px;
+  align-items: center;
+  border-radius: 6px;
+  background: #ffe8e8;
+  margin-bottom: 15px;
+  padding: 4px 13px;
+}
+
+.contentRegistro .mensajeErrorRegistro.active,
+.contentRegistro .mensajeErrorRegistro2.active {
+  display: flex;
+}
+
+.contentRegistro .mensajeErrorRegistro .icon,
+.contentRegistro .mensajeErrorRegistro2 .icon {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.contentRegistro .mensajeErrorRegistro p,
+.contentRegistro .mensajeErrorRegistro2 p {
+  color: #c53030;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modalPopup .content button {
+  color: #fff;
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #003c3e;
+  max-width: 149px;
+  width: 100%;
+  padding: 11px 0;
+  display: block;
+  margin-top: 21px;
+}
+
+.modalPopup.noconfirmado .content p {
+  color: #c53030;
+}
+
+.modalPopup.noconfirmado .content span {
+  color: #c53030;
+  opacity: 1;
+}
+
+.modalPopup.noconfirmado .content span.dos {
+  color: #003c3e;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.modalPopup.noconfirmado .content,
+.modalPopup.confirmado .content {
+  max-width: 270px;
+}
+
+.contentRegistro .adjuntarImagen {
+  display: flex;
+  align-items: center;
   gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs div label{
-  width: 17px;
-  height: 17px;
+
+.contentRegistro .adjuntarImagen input {
+  display: none;
 }
-.modalPreferencias .content .elemento .cuerpo .listaInputs{
-  row-gap: 11px;
+
+.contentRegistro .adjuntarImagen p {
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  pointer-events: none;
 }
-.modalPreferencias .content .elemento.active .cabecera {
-  margin-bottom: 18px;
+
+.contentRegistro .adjuntarImagen svg {
+  pointer-events: none;
 }
-.modalPreferencias .content .elemento {
-  padding: 19px 0;
+
+.modalAdjuntarImagen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* Usa dvh en lugar de vh */
+  background: rgba(3, 3, 3, 0.6);
+  z-index: 999;
+  display: none;
 }
-.modalPreferencias .content .guardar{
-  max-width: 213.981px;
-  padding: 17px 0;
+
+.modalAdjuntarImagen.active {
+  display: block;
 }
+
+.modalAdjuntarImagen .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalAdjuntarImagen .content {
+  border-radius: 5px;
+  background: #fff;
+  max-width: 289px;
+  width: 100%;
+  position: relative;
+  padding: 37px 30px 32px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modalAdjuntarImagen .content h3 {
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.modalAdjuntarImagen .content p {
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.modalAdjuntarImagen .content label {
+  border-radius: 8px;
+  border: 1px dashed #003c3e;
+  width: 171px;
+  height: 96px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 22px 0;
+  cursor: pointer;
+}
+
+.modalAdjuntarImagen .content label.active {
+  display: flex;
+}
+
+.modalAdjuntarImagen .content .btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modalAdjuntarImagen .content .btns button {
+  color: #78b548;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  width: 75.389px;
+  height: 28.271px;
+  border: 1px solid #78b548;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.modalAdjuntarImagen .content .contentArchivo {
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  display: none;
+}
+
+.modalAdjuntarImagen .content .contentArchivo.active {
+  display: flex;
+}
+
+.modalAdjuntarImagen .content .contentArchivo p {
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin: 16px 0 22px 0;
+  opacity: 1;
+}
+
+.tablaIngreso .filtro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #78b548;
+  font-family: SFPRODISPLAY-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.tablaIngreso .tabla.mesaPartes {
+  margin-top: 25px;
+}
+.tablaIngreso .tabla.mesaPartes .tabla .tr .resumen {
+  text-align: center;
+}
+
+.tablaIngreso .tabla.mesaPartes .cabecera div:last-child {
+  display: block;
+}
+
+.tabla.mesaPartes .cabecera div:first-child {
+  padding-left: 0;
+  justify-content: center;
+}
+.tablaIngreso .tabla.mesaPartes .cabecera {
+  justify-content: space-between;
+}
+
+.tablaIngreso .tabla.mesaPartes .tabla .tr .buttons .estado {
+  display: block;
+}
+
+.tablaIngreso .tabla.mesaPartes .tabla .tr .buttons {
+  width: 27%;
+}
+
+.tablaIngreso .tabla.mesaPartes .tabla .tr {
+  gap: 0;
+}
+
+.tablaIngreso .tabla.mesaPartes .tabla .tr .flecha {
+  opacity: 0.5;
+}
+
+.tablaIngreso .tabla.mesaPartes .tabla .tr .buttons .estado,
+.tablaIngreso .tabla.mesaPartes .tabla .tr .resumen,
+.tablaIngreso .tabla.mesaPartes .tabla .tr .buttons {
+  font-size: 12px;
+}
+
+#ui-datepicker-div {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background-color: #fff !important;
+  border: none;
+  border-bottom: 1px solid #78b548;
+}
+
+.ui-datepicker th {
+  color: #003c3e;
+  font-family: Lato;
+  font-size: 9.424px;
+  font-weight: 500;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border: none;
+  background-color: transparent;
+  color: #003c3e;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14.135px;
+  width: 35.002px;
+  height: 32.983px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+  background: #eeffbf;
+}
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: 7px 0;
+}
+
+body.modal {
+  overflow: hidden;
+  position: relative;
+}
+
+body.modal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.6);
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  border: none;
+  background: transparent;
+  font-weight: initial;
+  color: initial;
+}
+
+.ui-datepicker .ui-datepicker-prev span {
+  background-image: url(../imgs/chevron-left.svg);
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 80%;
+  background-position: initial;
+}
+
+.ui-datepicker .ui-datepicker-next span {
+  background-image: url(../imgs/chevron-right.svg);
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 80%;
+  background-position: initial;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 8px !important;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  top: 8px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 2px;
 }
