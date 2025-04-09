@@ -472,11 +472,12 @@ button {
 
 .modalContrasena .content .mensajeErrorContrasena p {
   color: #c53030;
-  font-family: SFPRODISPLAY-Medium;
+  font-family: SFPRODISPLAY-Regular;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   padding: 0;
+  opacity: 1;
 }
 
 .modalContrasena .content form.error button {
@@ -577,5 +578,140 @@ button {
   .modalContrasena .content form button {
     margin-top: 14px;
     width: 151.154px;
+  }
+  .contentLogin .part2 .formulario {
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+  }
+  .contentLogin .part2 {
+    background-color: #78b548;
+  }
+  .contentLogin .part2 .formulario form button {
+    max-width: 222px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contentLogin .part1 p {
+    line-height: 150%;
+  }
+  .modalContrasena .content {
+    max-width: 95%;
+  }
+  .modalContrasena .content form input {
+    height: 44px;
+  }
+  .modalContrasena .content form button {
+    padding: 11px 0;
+  }
+  .modalContrasena .content .closeModal {
+    right: 17px;
+  }
+  .modalPopup .content {
+    max-width: 80%;
+  }
+  .modalPopup .content .closeModal {
+    top: 26px;
+    right: 21px;
+  }
+}
+
+.contentLogin .recuperarContrasena .content {
+  margin-top: 45px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.45);
+  padding: 20px 25px;
+}
+
+.contentLogin .recuperarContrasena .content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #003c3e;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.contentLogin .part2 .recuperarContrasena h1 {
+  display: block;
+  margin-top: 40px;
+  color: #003c3e;
+  text-align: center;
+  font-family: SFPRODISPLAY;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contentLogin .part2 .recuperarContrasena p {
+  color: rgba(0, 60, 62, 0.5);
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 128%;
+  padding-top: 5px;
+  padding-bottom: 40px;
+}
+.recuperarContrasena .part1 {
+  padding-bottom: 50px;
+}
+
+.contentLogin .part2 .recuperarContrasena form button {
+  background: #003c3e;
+  color: #fff;
+  font-size: 20px;
+}
+
+.contentLogin .part2 .recuperarContrasena .pie {
+  color: rgba(0, 60, 62, 0.5);
+  text-align: center;
+  font-family: SFPRODISPLAY-Regular;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 170%;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.contentLogin .part2 .recuperarContrasena .pie a {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.recuperarContrasena .content form p {
+  padding-left: 0;
+}
+
+.recuperarContrasena .content form button {
+  width: 230px;
+}
+.recuperarContrasena .part2 .formulario form {
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .contentLogin .part2 .recuperarContrasena {
+    padding: 15px 25px;
+  }
+  .contentLogin .part2 .recuperarContrasena form button {
+    max-width: 100%;
+    border-radius: 8px;
+    background: #003c3e;
+    color: #fff;
+    padding: 18px 10px;
+    font-size: 20px;
+  }
+  .contentLogin .part2 .recuperarContrasena .pie,
+  .contentLogin .part2 .recuperarContrasena .pie a {
+    font-size: 14px;
+  }
+  .recuperarContrasena .content {
+    max-width: 100%;
+  }
+  .recuperarContrasena .container {
+    width: 87%;
   }
 }
