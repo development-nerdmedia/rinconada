@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxContainer = document.querySelector(".checkbox");
   const checkbox = document.getElementById("recordar_contraseña");
 
-  checkbox.addEventListener("change", function () {
-    checkboxContainer.classList.toggle("active", checkbox.checked);
-  });
+  if (checkbox) {
+    checkbox.addEventListener("change", function () {
+      checkboxContainer.classList.toggle("active", checkbox.checked);
+    });
+  }
 
   /* envio del formulario */
   const mensajeError = document.querySelector("#mensajeError");
