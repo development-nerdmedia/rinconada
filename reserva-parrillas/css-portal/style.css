@@ -3608,17 +3608,34 @@ main.reservas .historial a {
   font-weight: 500;
 }
 
-main.reservas .ocultarContent {
+main.reservas .ocultarContent,
+main.reservas .ocultarContent2,
+main.reservas .ocultar {
   display: none;
 }
 
-main.reservas .contentParrillas table {
+main.reservas table {
   width: 100%;
   margin-top: 27px;
-  margin-bottom: 100px;
 }
-
-main.reservas .contentParrillas table td.cabecera2 {
+main.reservas .contentTabla {
+  overflow: hidden;
+  overflow-x: auto;
+}
+main.reservas .contentTabla::-webkit-scrollbar {
+  width: 8px; /* ancho vertical */
+  height: 8px; /* alto horizontal */
+}
+main.reservas .contentTabla::-webkit-scrollbar-track {
+  background: #ccc; /* color de fondo */
+  border-radius: 10px;
+}
+main.reservas .contentTabla::-webkit-scrollbar-thumb {
+  background-color: #003c3e; /* color de la barra */
+  border-radius: 10px;
+  border: 2px solid #003c3e; /* borde para separar */
+}
+main.reservas table td.cabecera2 {
   border-radius: 16px 16px 0px 0px;
   background: #003c3e;
   padding: 18px 30px;
@@ -3626,26 +3643,51 @@ main.reservas .contentParrillas table td.cabecera2 {
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
+  text-align: start;
 }
 
-main.reservas .contentParrillas table td.subcabecera2 {
+main.reservas table td {
+  padding: 12px 20px;
+  white-space: nowrap;
+  color: #003c3e;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f3fcff;
+}
+
+main.reservas table td button {
+  border-radius: 8px;
+  border: 1px solid #162968;
+  background: #c8e6ff;
+  padding: 5px 8px;
+  color: #162968;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main.reservas table td.subcabecera2 {
   color: #003c3e;
   text-align: center;
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;
   background: #d9e2e2;
-  padding: 12px 0;
+  padding: 12px 20px;
 }
 
-main.reservas .contentParrillas table td .vacio {
+main.reservas .contentParrillas .vacio {
   border-radius: 0px 0px 16px 16px;
   border: 1px solid #ccc;
   background: #fafafa;
   padding: 45px 0;
 }
 
-main.reservas .contentParrillas table td .vacio {
+main.reservas .contentParrillas .vacio {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3654,18 +3696,18 @@ main.reservas .contentParrillas table td .vacio {
   height: 100%;
 }
 
-main.reservas .contentParrillas table td .vacio img {
+main.reservas .contentParrillas .vacio img {
   width: 56px;
 }
 
-main.reservas .contentParrillas table td .vacio p {
+main.reservas .contentParrillas .vacio p {
   color: #ccc;
   font-family: Inter;
   font-size: 12px;
   font-weight: 600;
 }
 
-main.reservas .contentParrillas .nuevaReserva {
+main.reservas .nuevaReserva {
   border-radius: 50px;
   background: #78b548;
   color: #fff;
@@ -3679,9 +3721,12 @@ main.reservas .contentParrillas .nuevaReserva {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
-.modalAvisoImportante {
+.modalAvisoImportante,
+.modalTipoReserva,
+.modalRegistroCompletado {
   position: fixed;
   top: 0;
   left: 0;
@@ -3692,18 +3737,24 @@ main.reservas .contentParrillas .nuevaReserva {
   display: none;
 }
 
-.modalAvisoImportante.active {
+.modalAvisoImportante.active,
+.modalTipoReserva.active,
+.modalRegistroCompletado.active {
   display: block;
 }
 
-.modalAvisoImportante .container {
+.modalAvisoImportante .container,
+.modalTipoReserva .container,
+.modalRegistroCompletado .container {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modalAvisoImportante .content {
+.modalAvisoImportante .content,
+.modalTipoReserva .content,
+.modalRegistroCompletado .content {
   border-radius: 20px;
   background: #fff;
   max-width: 404px;
@@ -3715,14 +3766,23 @@ main.reservas .contentParrillas .nuevaReserva {
   flex-direction: column;
 }
 
-.modalAvisoImportante .content .closeModal {
+.modalTipoReserva .content,
+.modalRegistroCompletado .content {
+  padding-top: 50px;
+}
+
+.modalAvisoImportante .content .closeModal,
+.modalTipoReserva .content .closeModal,
+.modalRegistroCompletado .content .closeModal {
   position: absolute;
   top: 16px;
   right: 16px;
   cursor: pointer;
 }
 
-.modalAvisoImportante .content h2 {
+.modalAvisoImportante .content h2,
+.modalTipoReserva .content h2,
+.modalRegistroCompletado .content h2 {
   color: #003c3e;
   text-align: center;
   font-family: Inter;
@@ -3730,7 +3790,8 @@ main.reservas .contentParrillas .nuevaReserva {
   font-weight: 700;
   margin-bottom: 25px;
 }
-.modalAvisoImportante .content p {
+.modalAvisoImportante .content p,
+.modalRegistroCompletado .content p {
   color: #003c3e;
   text-align: center;
   font-family: Inter;
@@ -3759,7 +3820,9 @@ main.reservas .contentParrillas .nuevaReserva {
   font-weight: 500;
 }
 
-.modalAvisoImportante .content .deacuerdo {
+.modalAvisoImportante .content .deacuerdo,
+.modalTipoReserva .content .deacuerdo,
+.modalRegistroCompletado .content .deacuerdo {
   width: 100%;
   border-radius: 50px;
   background: var(--500, #78b548);
@@ -3771,4 +3834,485 @@ main.reservas .contentParrillas .nuevaReserva {
   font-weight: 500;
   border: none;
   margin-top: 32px;
+}
+.modalTipoReserva .content .contentSelect {
+  position: relative;
+  width: 95%;
+}
+.modalTipoReserva .content .contentSelect::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 8px;
+  background-image: url(../imgs/flechaSelect.svg);
+  background-size: 100%;
+}
+.modalTipoReserva .content select {
+  border-radius: 8px;
+  border: 0.5px solid #003c3e;
+  background: #f3fcff;
+  padding: 12px;
+  color: var(--600, #003c3e);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none; /* Safari y Chrome */
+  -moz-appearance: none; /* Firefox */
+}
+
+.contentHorario {
+  display: none;
+}
+
+.contentHorario .disponibilidad {
+  margin-top: 33px;
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contentHorario .nuevaReserva {
+  margin-top: 10px !important;
+}
+
+#calendar {
+  max-width: 900px;
+  padding: 15px 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  border: 1px solid #c9e2b6;
+}
+
+.fc .fc-button-primary:disabled {
+  display: none;
+}
+.fc .fc-toolbar-title {
+  text-transform: capitalize;
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 15.706px;
+  font-weight: 700;
+}
+
+.fc .fc-button-group > .fc-button {
+  background: transparent;
+  border: none;
+}
+
+.fc-icon-chevron-left:before,
+.fc-icon-chevron-right:before {
+  filter: invert(1);
+}
+.fc button.fc-today-button {
+  display: none;
+}
+
+.fc .fc-col-header-cell-cushion {
+  text-transform: uppercase;
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 9.424px;
+  font-weight: 500;
+}
+
+.fc .fc-view-harness {
+  position: relative;
+}
+
+.fc .fc-view-harness::before {
+  content: "";
+  width: 100%;
+  height: 0.785px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  background-color: #78b548;
+}
+
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  min-height: 0;
+  height: 0;
+  display: none;
+}
+
+.fc .fc-daygrid-day-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fc .fc-daygrid-day-top {
+  align-items: center;
+  justify-content: center;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 14.135px;
+  font-weight: 500;
+}
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border: none;
+}
+
+.fc-theme-standard td.active {
+  border: 1px solid #78b548;
+  border-radius: 4px;
+}
+
+.fc-theme-standard td.active a {
+  color: #78b548;
+}
+.contentMesa .contentImg {
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+}
+
+.contentMesa .contentImg::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
+.contentMesa .contentImg img {
+  position: relative;
+  z-index: 1;
+}
+
+.contentMesa .contentImg div {
+  position: absolute;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border: 1px solid #003c3e;
+  border-radius: 50%;
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 10.505px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentMesa .contentImg div.ocupado {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #e95151;
+  pointer-events: none;
+}
+
+.contentMesa .contentImg div.active {
+  background-color: #003c3e;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.contentMesa .contentImg div.uno {
+  top: 242px;
+  left: 131px;
+}
+.contentMesa .contentImg div.dos {
+  top: 293px;
+  left: 175px;
+}
+
+.contentMesa .contentImg div.tres {
+  top: 158px;
+  left: 198px;
+}
+
+.contentMesa .contentImg div.cuatro {
+  top: 206px;
+  left: 193px;
+}
+
+.contentMesa .contentImg div.cinco {
+  top: 260px;
+  left: 239px;
+}
+
+.contentMesa .contentImg div.seis {
+  top: 309px;
+  left: 272px;
+}
+
+.contentMesa .contentImg div.siete {
+  top: 153px;
+  left: 269px;
+}
+
+.contentMesa .contentImg div.ocho {
+  top: 197px;
+  left: 269px;
+}
+.contentMesa .contentImg div.nueve {
+  top: 157px;
+  left: 343px;
+}
+
+.contentMesa .contentImg div.dies {
+  top: 207px;
+  left: 342px;
+}
+
+.contentMesa .contentImg div.once {
+  top: 266px;
+  left: 342px;
+}
+.contentMesa .contentImg div.doce {
+  top: 311px;
+  left: 386px;
+}
+.contentMesa .contentImg div.trece {
+  top: 157px;
+  left: 427px;
+}
+.contentMesa .contentImg div.catorce {
+  top: 207px;
+  left: 427px;
+}
+.contentMesa .contentImg div.quince {
+  top: 264px;
+  left: 427px;
+}
+
+.contentMesa .datos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contentMesa .datos .item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contentMesa .datos .item div {
+  width: 20px;
+  height: 20px;
+  background-color: #003c3e;
+  border: 1px solid #003c3e;
+  border-radius: 50%;
+}
+
+.contentMesa .datos .item.dos div {
+  background-color: #fff;
+}
+
+.contentMesa .datos .item.tres div {
+  background-color: #e95151;
+  border: 1px solid #e95151;
+}
+
+.contentMesa .nuevaReserva {
+  margin-top: 45px !important;
+}
+
+main.reservas .contentParrillas .loading {
+  border-radius: 12px;
+  background: #fafafa;
+  padding: 150px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+main.reservas .contentParrillas .loading p {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+main.reservas .contentParrillas .loading img {
+  margin: 0 auto;
+  animation: rotar 2s infinite linear;
+}
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+main.reservas .tablaRegistro td {
+  padding: 20px 20px;
+}
+main.reservas .tablaRegistro td input {
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #003c3e;
+  text-align: center;
+  outline: none;
+}
+main.reservas .tablaRegistro td input:focus,
+main.reservas .tablaRegistro td input:hover {
+  border: 1px solid #003c3e;
+}
+
+main.reservas .tablaRegistro table tr {
+  border-bottom: 1px solid #003c3e;
+}
+
+main.reservas .tablaRegistro table tr:nth-child(2),
+main.reservas .tablaRegistro table tr:nth-child(1) {
+  border-bottom: none;
+}
+
+main.reservas .tablaRegistro .info {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+main.reservas .tablaRegistro .info p {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.reservas .tablaRegistro .info span {
+  color: #ccc;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main.reservas .tablaRegistro .info span.verde {
+  color: #78b548;
+}
+
+main.reservas .tablaRegistro .nuevaReserva {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  gap: 3px;
+}
+main.reservas table td button.agregar {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  background: #fff;
+  justify-content: center;
+}
+main.reservas .tablaRegistro table td.cabecera2 div,
+main.reservas .checkout table td.cabecera2 div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main.reservas .tablaRegistro table td.cabecera2 div:nth-child(2),
+main.reservas .checkout table td.cabecera2 div:nth-child(2) {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.checkout .title .part2,
+.listaInvitados .title .part2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.checkout .title .part2 button,
+.listaInvitados .title .part2 button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50px;
+  background: var(--500, #78b548);
+  border: navajowhite;
+}
+
+.checkout .total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
+  gap: 20px;
+}
+.checkout .total span {
+  color: #003c3e;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.checkout .total p {
+  color: #78b548;
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+main.reservas .checkout .nuevaReserva {
+  margin-top: 40px;
+}
+.listaInvitados table td .socio {
+  color: #92903a;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid #92903a;
+  background: #e2dbb6;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.listaInvitados table td button.estado {
+  color: #61923a;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid #61923a;
+  background: #c9e2b6;
 }
